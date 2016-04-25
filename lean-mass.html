@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+    <meta charset="UTF-8">
+    <title> Goal's Gym </title>
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="css/styleSheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/slicknav.css" />
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="preloader">
+    <h1> WELCOME TO GOAL'S GYM </h1>
+    <h2>Loading...</h2>
+    <img src="images/preloader-background.jpg">
+</div>
+
+<div class="wrapper">
+
+    <ul id="menu">
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="exercises.html"> Exercises </a></li>
+        <li><a href="calculators.html"> Calculators </a></li>
+        <li><a href="#"> Progress </a></li>
+        <li><a href="#"> Account </a></li>
+    </ul>
+
+    <div class="content-container">
+
+        <div id="lean-mass">
+            <h1> Lean Body Mass Calc </h1>
+
+            <h2> Weight (lbs) </h2>
+            <input id=weight type=number inputmode="numeric" pattern="[0-9]*" value=150 onchange=lm()>
+            <h2> Body Fat Percantage (%):</h2>
+            <input id=percent type=number inputmode="numeric" pattern="[0-9]*" value=18 onchange=lm()>
+            <output></output>
+
+            <h3><a href="calculators.html"> < back </a></h3>
+        </div>
+
+    </div><!-- Content Container end -->
+</div><!-- Wrapper End Tag -->
+
+<script>
+    jQuery(document).ready(function($) {
+        $(window).load(function(){
+            $('#preloader').stop().animate({top:1000}, 800);
+        });
+    });
+</script>
+
+<script>
+    $('.js div#preloader h2').addClass('animated flash infinte');
+</script>
+
+<script>
+    $('#menu').slicknav({
+        label: "",
+        'brand': "GOAL'S GYM",
+        easingOpen:	"swing",
+        easingClose: "swing"
+    })
+</script>
+
+<script>
+    function lm(){
+        var weight = document.getElementById('weight').value;
+        var percent = document.getElementById('percent').value,
+                output = document.querySelector('output'),
+                formula = ~~(weight*((100-percent)/100)),
+                category = ''
+
+        output.innerHTML = '<h4 style="font-size: 2.5em; margin-left: 24%">= '+formula+'</h4>'
+    }
+    lm()
+</script>
+
+</body>
+
+
+</html>

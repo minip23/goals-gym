@@ -1,0 +1,86 @@
+<?php
+    include('php/db_connect.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+    <meta charset="UTF-8">
+    <title> Goal's Gym </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/styleSheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/slicknav.css" />
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="preloader">
+    <h1> WELCOME TO GOAL'S GYM </h1>
+    <h2>Loading...</h2>
+    <img src="images/preloader-background.jpg">
+</div>
+
+<div class="wrapper">
+
+    <ul id="menu">
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="calculators.html"> Calculators </a></li>
+        <li><a href="#"> Progress </a></li>
+        <li><a href="#"> Account </a></li>
+    </ul>
+
+    <div id="exercises">
+        <h1> Exercises </h1>
+        <h2> Your database for exercises. Browse through muscle groups and select exercises. </h2>
+
+        <nav>
+            <ul>
+                <li> <a href=""> Chest </a> </li>
+                <li> <a href=""> Back </a> </li>
+                <li> <a href=""> Shoulders </a> </li>
+                <li> <a href=""> Legs </a> </li>
+                <li> <a href=""> Arms </a> </li>
+            </ul>
+        </nav>
+    </div>
+
+</div><!-- Wrapper End Tag -->
+
+<script>
+    jQuery(document).ready(function($) {
+        $(window).load(function(){
+            $('#preloader').stop().animate({top:1000}, 800);
+        });
+    });
+</script>
+
+<script>
+    $('.js div#preloader h2').addClass('animated flash infinte');
+</script>
+
+<script>
+    $('#menu').slicknav({
+        label: "",
+        'brand': "Goal's Gym",
+        easingOpen:	"swing",
+        easingClose: "swing"
+    })
+</script>
+
+</body>
+
+
+</html>
