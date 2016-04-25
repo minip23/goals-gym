@@ -1,0 +1,492 @@
+@media only screen and (max-width: 900px) {
+
+    /* CSS Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+    /* CSS Stylings Start */
+
+    body{
+        width: 100%;
+        background: #ffffff;
+    }
+
+    .wrapper{
+        overflow: hidden;
+    }
+
+    /* Preloader CSS */
+    #preloader{
+        opacity: 1;
+    }
+
+    .js div#preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1001;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #f05e2a;
+    }
+
+    .js div#preloader img{
+        top: 0;
+        z-index: 1001;
+        width: 125%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    @keyframes blink {
+        0% {
+        rgba(255,0,0,1)
+        }
+        50% {
+        rgba(255,0,0,0.5)
+        }
+        100% {
+        rgba(255,0,0,1)
+        }
+    }
+
+    .js div#preloader h1{
+        position: absolute;
+        padding: 50% 10% 0 10%;
+        font-family: 'Source Serif Pro', serif;
+        font-size: 2em;
+        color: #ffffff;
+        text-align: center;
+        line-height: 1.3em;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+    }
+
+    .js div#preloader h2{
+        position: absolute;
+        padding-top: 90%;
+        left: 38%;
+        font-family: 'Source Serif Pro', serif;
+        font-size: 1.3em;
+        color: #ffffff;
+        text-align: center;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+    }
+
+
+
+
+    .slicknav_menu {
+        display:none;
+    }
+
+    #page1{
+        width: 100%;
+        height: 100vh;
+        background: #3e3e40;
+    }
+
+    h1{
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 2em;
+        line-height: 1.4em;
+        padding: 40px 0 0 20px;
+     }
+
+    .box{
+        float: left;
+        margin: 20px 5% 0 5%;
+        width: 89%;
+        height: 30%;
+        background: #f2863d;
+        box-shadow: -1px 3px 7px #333;
+    }
+
+    .box h1{
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: left;
+        color: #ffffff;
+        font-size: 0.95em;
+        line-height: 1.6em;
+        padding: 0;
+        margin: 25px 30px 0 30px;
+    }
+
+    #page2{
+        width: 100%;
+        height: 700px;
+        background: #ffffff;
+    }
+
+    #page2 h1{
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #424343;
+        float: left;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        padding: 30px 0 0 20px;
+    }
+
+    /* Exercises Page */
+    #exercises{
+        width: 100%;
+        height: 100%;
+        background: #3e3e40;
+    }
+
+    #exercises h1{
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 2em;
+        line-height: 1.4em;
+        padding: 40px 0 0 20px;
+    }
+
+    #exercises h2{
+        float: left;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: justify;
+        color: #ffffff;
+        font-size: 0.95em;
+        line-height: 1.4em;
+        padding: 15px 60px 0 20px;
+    }
+
+    #exercises nav{
+        width: 100%;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    #exercises ul{
+        width: 100%;
+        padding: 60px 0 0 0;
+        text-align: center;
+        color: #fff;
+    }
+
+    #exercises li{
+        background: linear-gradient(#f49a5d, #f0721d);
+        border-top: 1px solid #222222;
+        height: 12vh;
+    }
+
+    #exercises a{
+        display:block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        text-align: center;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        font-size: 1.3em;
+        line-height: 3.4em;
+    }
+
+
+    /* Calculators CSS */
+    #calculators{
+        position: static;
+        width: 100%;
+        height: 100%;
+        background: #3e3e40;
+        overflow: hidden;
+    }
+
+    #calculators h1{
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 2em;
+        line-height: 1.4em;
+        padding: 30px 0 25px 20px;
+    }
+
+    #calculators h2{
+        clear: both;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 1.1em;
+        line-height: 1.4em;
+        padding: 0 20px 20px 20px;
+    }
+
+    #calculators nav{
+        width: 100%;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    #calculators ul{
+        width: 100%;
+        padding: 60px 0 0 0;
+        text-align: center;
+        color: #fff;
+    }
+
+    #calculators li{
+        background: linear-gradient(#f49a5d, #f0721d);
+        border-top: 1px solid #222222;
+        height: 12vh;
+    }
+
+    #calculators a{
+        display:block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        text-align: center;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        font-size: 1.3em;
+        line-height: 3.4em;
+    }
+
+
+    /* BMI Calculator CSS */
+    #bmi{
+        position: static;
+        width: 100%;
+        height: 125vh;
+        background: #3e3e40;
+        overflow: hidden;
+    }
+
+    #bmi h1{
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 2em;
+        line-height: 1.4em;
+        padding: 30px 0 10px 20px;
+    }
+
+    #bmi h2{
+        clear: both;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        padding: 0 0 20px 20px;
+    }
+
+    #bmi h3{
+        clear: both;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 0.9em;
+        line-height: 1.6em;
+        padding: 0 20px 30px 20px;
+    }
+
+    #bmi h3 a{
+        border: 2px solid #FFF;
+        text-decoration: none;
+        border-radius: 10px;
+        clear: both;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        padding: 5px 8px 5px 8px;
+        margin: 0 0 0 15px;
+    }
+
+    #bmi h4{
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 2em;
+        line-height: 1.4em;
+        padding: 30px 0 40px 20px;
+    }
+
+
+    /* Lean Mass Calculator CSS */
+    #lean-mass{
+        position: static;
+        width: 100%;
+        height: 89vh;
+        background: #3e3e40;
+        overflow: hidden;
+    }
+
+    #lean-mass h1{
+         font-family: 'Source Sans Pro', sans-serif;
+         color: #ffffff;
+         float: left;
+         font-size: 2em;
+         line-height: 1.4em;
+         padding: 30px 0 25px 20px;
+     }
+
+    #lean-mass h2{
+        clear: both;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        padding: 0 0 20px 20px;
+    }
+
+    #lean-mass h3 a{
+        border: 2px solid #FFF;
+        text-decoration: none;
+        border-radius: 10px;
+        clear: both;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        padding: 5px 8px 5px 8px;
+        margin: 0 0 0 20px;
+    }
+
+    #lean-mass h4{
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 2em;
+        line-height: 1.4em;
+        padding: 30px 0 10px 20px;
+    }
+
+    #kg{
+        position: static;
+        width: 100%;
+        height: 89vh;
+        background: #3e3e40;
+        overflow: hidden;
+    }
+
+    #kg h1{
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 2em;
+        line-height: 1.4em;
+        padding: 30px 0 25px 20px;
+    }
+
+    #kg h2{
+        clear: both;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        padding: 0 0 20px 20px;
+    }
+
+    #kg h3 a{
+        border: 2px solid #FFF;
+        text-decoration: none;
+        border-radius: 10px;
+        clear: both;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        padding: 5px 8px 5px 8px;
+        margin: 0 0 0 20px;
+    }
+
+    #kg h4{
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 2em;
+        line-height: 1.4em;
+        padding: 10px 0 60px 20px;
+    }
+
+    input {
+        display: block;
+        margin: 0 0 1em 0;
+        padding: .4em .5em;
+        width: 100%;
+        height: 40px;
+        outline: none;
+    }
+    [type=number] {
+        display: block;
+        margin: 4em 0 1em 6vw;
+        padding: .4em .5em;
+        width: 80%;
+        height: 40px;
+        outline: none;
+        border: 1px solid rgba(255,255,255,.7);
+        border-radius: 2px;
+        background: rgba(255,255,255,.5);
+        box-shadow: rgba(0,0,0,.15) 0 1px 0;
+        color: rgba(0,0,0,.7);
+        font-weight: 400;
+        font-size: 12pt;
+        transition: all .2s ease-in-out;
+        -webkit-appearance: none;
+        appearance: none;
+        -moz-appearance: none;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    [type=number]:focus {
+        outline: none;
+        border-color: orange;
+        box-shadow: #fc0 0 0 3px;
+    }
+}
